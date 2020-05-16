@@ -22,8 +22,8 @@
   #logo {
 	position: fixed;
 	left: 30px;
-	top: 30px;
-	height: 7vh;
+	top: 20px;
+	height: 6vh;
 	fill: white;
   }
   #dna {
@@ -44,6 +44,7 @@
 	  position: relative;
 	  top: 15vh;
 	  width: 60%;
+	  background-color: white;
 	  background-image: url("images/fon.png");
 	  background-size: cover;
 

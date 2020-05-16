@@ -16,11 +16,11 @@ function quizBoxInit(id){
 	box.append($('<h2>', {id:('num_'+ id)}))
 	if (id) {$('#num_'+ id)[0].innerText = id + "/8";}
 	box.append($('<h1>', {id:('question_'+ id)}));
-	if (id) {$('#question_0')[0].style.marginTop = "50px";}
+	if (!id) {$('#question_0')[0].style.marginTop = "50px";}
 	
 	$('#question_'+ id)[0].style.fontSize = h1Size;
 	$('#question_'+ id)[0].innerText = texts[id][0];
-	box.append($('<img>',{id:('img_' + id),src:('gifs/' + id + '.gif'), class:"quiz-img"}));
+	box.append($('<img>',{id:('img_' + id),src:('gifs/' + (id+1) + '.gif'), class:"quiz-img"}));
 
 	if (id){
 	box.append($('<div>', {id: ('ans-box_'+id), class:"ans-box"}));
@@ -43,11 +43,12 @@ function resultBoxInit(id, ans){
 	box = $("#a"+id)
 	box.append($('<h2>', {id:('num0_'+ id)}))
 	if (id) {$('#num_'+ id)[0].innerText = id + "/8";}
+
 	box.append($('<h1>', {id:('question0_'+ id), class:"free-space"}));
-	if (id) {$('#question_0')[0].style.marginTop = "50px";}
-	
 	$('#question0_'+ id)[0].style.fontSize = h1Size;
-	$('#question0_'+ id)[0].style.marginTop = "50px";
+
+
+	$('#question0_'+ id)[0].style.marginTop = "15px";
 	$('#question0_'+ id)[0].innerText = answers[id][ans];
 	box.append($('<div>', {class: "next-button", id: ("next0_"+id)}));
 	box.append($('<img>', {id: ('tab-'+id), class:"tab"}));
@@ -64,7 +65,7 @@ function resultBoxInit(id, ans){
 	mouseOnElement($("#next0_"+id));
 }
 
-texts = [["Получить промокод очень просто: ответь на два простых вопроса и оставь свой email!"], 
+texts = [["Введите текст"], 
 [
 	"С чего начинается поиск перспективных молекул для нового препарата?", 
 	"Изучение аномальных изменений в организме на биохимическом и клеточном уровне, вызываемых конкретным заболеванием", "Утверждение программы клинических исследований на людях"
