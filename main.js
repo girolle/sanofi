@@ -217,7 +217,7 @@ function exit(){
 	$("#finish")[0].style.paddingBottom = "50px";
 	$('#finish-text')[0].style.marginTop = "50px";
 	$('#finish-text')[0].style.fontSize = h1Size;
-	$('#finish-text')[0].innerHTML = "Ваш результат: " + result + "/8<br>ССпасибо за участие! Оставьте свой адрес электронной почты, чтобы быть в курсе новостей стартап-лаборатории Санофи и Фонда “Сколково”.";
+	$('#finish-text')[0].innerHTML = "Ваш результат: " + result + "/8<br>Спасибо за участие! Оставьте свой адрес электронной почты, чтобы быть в курсе новостей стартап-лаборатории Санофи и Фонда “Сколково”.";
 	box[0].style.height = "60vh";
 //	box.append($('<img>',{id:('img_final'),src:('images/finished.png'), class:"quiz-img"}));
 /*	box.append($('<div>', {id: ('text-box'), class:"ans-box"}));
