@@ -1,39 +1,65 @@
+@font-face {
+    font-family: Avant;
+	src: url("AvantGarde\ Regular.ttf");
+  }
+
 * {
 	box-sizing: border-box;
 		-moz-user-select: none;
 		-khtml-user-select: none;
 		-webkit-user-select: none;
 		user-select: none;
+		color: rgb(82, 92, 163);
 
   }
   
   html {
-	background: white;
-	height: 100%;
+	background-color: rgb(230, 237, 249);
+	height: 99%;
+	width:  99%;
+
 	margin: 0;
   }
 
   body {
 	margin: 0 auto 10%;
-	font-family: Cera, Arial, Helvetica, sans-serif;
+	font-family: Avant, Arial, Helvetica, sans-serif;
 	text-align: center;
+
+
   }
-  
-  #logo {
+  #top-margin{
+	  position: fixed;
+	  z-index: 1000;
+	  width: 100vw;
+	  height: 40px;
+	  background: rgb(73,93,163);
+	background: linear-gradient(180deg, rgba(73,93,163,1) 0%, rgba(129,154,212,1) 100%);
+  }
+  #bottom-margin{
 	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	width: 100vw;
+	height: 40px;
+	background: rgb(73,93,163);
+  background: linear-gradient(0deg, rgba(73,93,163,1) 0%, rgba(129,154,212,1) 100%);
+}
+  #logo-box{
+	top: 60px;
+
+	position: absolute;
+	  width: 100%;
+	  height: 5vh;
+	  background-color: white;
+  }
+  #logo {
+	position: absolute;
+	z-index: 100;
 	left: 30px;
-	top: 20px;
-	height: 6vh;
+	height: 5vh;
 	fill: white;
   }
-  #dna {
-	  position: fixed;
-	  height: 100%;
-	  width: auto;
-	  right: 5%;
-	  opacity: 0.2;
-  }
-
   p{
 	  margin: 5px;
   }
@@ -43,20 +69,12 @@
   .quiz-box {
 	  position: relative;
 	  top: 15vh;
-	  width: 60%;
-	  background-color: white;
-	  background-image: url("images/fon.png");
-	  background-size: cover;
-
 	  margin: auto auto 100px;
 	  display: none;
-	  box-shadow: 0 0 20px  rgb(0, 0, 0), 
-	  			0 0 0 20px rgb(73, 93, 163);
+
 	  height: auto;
-	  border-radius: 8%;
   }
   h1 {
-	  color: black;
 	  text-align: left;
 		margin: 0 8% 0 ;
 		
@@ -74,12 +92,15 @@
 .free-space{
 	margin-right:28%;
 	position: absolute;
+	transform: translate(0%, -50%);
+	top: 50%;
+
 }
 .tab{
-	width: 13%;
+	width: 20%;
 	height: auto;
 	position: absolute;
-	right: 8%;
+	right: 2%;
 	top: 50px;
 }
  .ans-box {
@@ -91,11 +112,11 @@
  .ans-button {
 	 height: auto;
 	 margin: 0 auto;
-	 background-image: url("images/ans.png");
+	 background-color: white;
+	 border: 1px solid rgb(230, 237, 249);
 	 background-size: 100% 100%;
 	 text-align: center;
-	 padding: 25px 25px;
-	 color: black;
+	 padding: 15px 15px;
 	 margin-bottom: 5%;
  }
  .bottom-border {
@@ -105,9 +126,10 @@
  .next-button{
 	 width: 120px;
 	 height: auto;
-	 padding: 70px 30px 10px;
+	 padding: 10px 30px 10px;
 	 margin: 60vh 0 20px auto;
-	 background-image: url("images/botton.png");
+	 background-color: rgb(73,93,163);
+	 
 	 background-size: contain;
 	 background-position: center;
 	 background-repeat: no-repeat;
